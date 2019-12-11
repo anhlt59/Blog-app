@@ -1,0 +1,92 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Python Coordinate</title>
+    <meta name="title" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" itemprop="image" content=""/>
+    <meta property="og:title" itemprop="name" content=""/>
+    <meta property="og:description" itemprop="description" content=""/>
+    <meta property="og:url" itemprop="url" content=""/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="" />
+    <link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}" />
+
+    <link type="text/css" rel="stylesheet" href="{% static 'blog/css/font-awesome.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'blog/css/responsive.css' %}">
+
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo_site">
+                <div class="container">
+                    <h1>Python Coordinate</h1>
+                    <div class="site_description">Learning Python!</div>
+                </div>
+            </div>
+            <div class="header_menu">
+                <div class="container">
+                    <ul>
+                        <li><a href="./" class="hover_link active">Trang chủ</a></li>
+                        <li><a href="#" class="hover_link">Basic</a></li>
+                        <li><a href="#" class="hover_link">Web Development</a></li>
+                        <li><a href="#" class="hover_link">Data Science</a></li>
+                        <li><a href="#" class="hover_link">Share Data</a></li>
+                    </ul>
+                    <div class="search">
+                        <form method="GET" action="">
+                            <input type="text" name="s" value="" placeholder="Bạn đang tìm kiếm gì?">
+                            <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <span class="menu_icon btn-fa-bars"><i class="fa fa-bars"></i></span>
+            <div class="mobile_header">
+                <span class="menu_icon_close btn-fa-close"><i class="fa fa-close"></i></span>
+                <div class="logo_site">
+                    <div class="container">
+                        <h1>Tuấn Anh Blog</h1>
+                        <div class="site_description">Learning Python!</div>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="./" class="hover_link active">Trang chủ</a></li>
+                    <li><a href="#" class="hover_link">Basic</a></li>
+                    <li><a href="#" class="hover_link">Computer Vision</a></li>
+                    <li><a href="#" class="hover_link">RNN-LSTM-GRU</a></li>
+                    <li><a href="#" class="hover_link">Share Data</a></li>
+                </ul>
+            </div>
+            <span class="btn-fa-search"><i class="fa fa-search"></i></span>
+            <div class="mobile_search">
+                <form method="GET" action="">
+                    <input type="text" name="s" value="" placeholder="Bạn đang tìm kiếm gì?">
+                    <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+
+        <div class="footer">
+            <div class="container">
+                <p>Trang chia sẻ kiến thức online miễn phí, với nhiều chủ đề khác nhau như: học lập trình, học tiếng Anh, thủ thuật công nghệ, chia sẻ tài nguyên miễn phí,...</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{% static 'blog/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'blog/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block content %}
+		<div class="home_page detail_page container">
+			<div class="detail_center">
+				<ul class="breadcrumb">
+					<li><a href="">Home</a></li>
+					<li><a href="">Technology</a></li>
+					<li>{{ object.title }}</li>
+				</ul>
+				<div class="detail_box">
+					<h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+					<ul class="entry_meta">
+						<li>
+							<span><i class="fa fa-user-o" aria-hidden="true"></i>
+								<a class="" href="">{{ post.author }}</a>
+							</span>
+						</li>
+						<li>
+							<i class="fa fa-calendar-o" aria-hidden="true"></i>
+							{{ post.created_at }}
+						</li>
+						<li>
+							<i class="fa fa-comment-o" aria-hidden="true"></i>
+							0 Comments
+						</li>
+
+					</ul>
+					<div class="entry_content">
+						<p class="card-text ">{{ object.content | safe }}</p>
+					</div>
+				</div>
+
+				<!-- <nav class="navigation post-navigation">
+					<div class="nav-links">
+						<div class="nav-previous">
+							<a href="" >
+								<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+								<span class="nav-title">Dạy bé “máy tính” tập tô màu cho ảnh đen trắng bằng mạng Auto-Encoder</span>
+							</a>
+						</div>
+						<div class="nav-next">
+							<a href="">
+								<span class="nav-title">Kết nối C# với Python Flask để triển khai hệ thống AI Client-Server – Chương 2</span>
+								<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</nav> -->
+
+				<div class="related_post">
+					<h2 class="title">
+						Bài liên quan
+						<span></span>
+					</h2>
+					<ul class="posts_box">
+						<!-- <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 5 – Nhận diện biển số xe bằng WPOD và SVM</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 4 – Nhận diện biển số xe bằng WPOD và Tesseract OCR</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 3 – Phát hiện biển số bằng OpenCV thuần</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 2 – Phát hiện biển số xe bằng pretrain WPOD-NET</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 1 – Phát hiện biển số xe bằng pretrain model YOLO</a></li> -->
+					</ul>
+				</div>
+
+			</div>
+			<div class="sidebar">
+				<div class="sidebar_li fanpage_fb">
+					<h2 class="title">
+						Fanpage Facebook
+						<span></span>
+					</h2>
+					<div class="clear"></div>
+					<!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FXemVuiVe247&tabs=timeline&width=350&height=350&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2298696833694808" width="350" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
+				</div>
+
+				<div class="sidebar_li posts posts_hot">
+					<h2 class="title">
+						Bài hot
+						<span></span>
+					</h2>
+					<ul class="posts_box">
+						<!-- <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 5 – Nhận diện biển số xe bằng WPOD và SVM</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 4 – Nhận diện biển số xe bằng WPOD và Tesseract OCR</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 3 – Phát hiện biển số bằng OpenCV thuần</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 2 – Phát hiện biển số xe bằng pretrain WPOD-NET</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 1 – Phát hiện biển số xe bằng pretrain model YOLO</a></li> -->
+					</ul>
+				</div>
+
+
+				<div class="sidebar_li posts posts_views">
+					<h2 class="title">
+						Bài nhiều lượt xem
+						<span></span>
+					</h2>
+					<ul class="posts_box">
+						<!-- <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 5 – Nhận diện biển số xe bằng WPOD và SVM</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 4 – Nhận diện biển số xe bằng WPOD và Tesseract OCR</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 3 – Phát hiện biển số bằng OpenCV thuần</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 2 – Phát hiện biển số xe bằng pretrain WPOD-NET</a></li>
+						<li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 1 – Phát hiện biển số xe bằng pretrain model YOLO</a></li> -->
+					</ul>
+				</div>
+
+				<div class="sidebar_li tags">
+					<h2 class="title">
+						Tags
+						<span></span>
+					</h2>
+					<ul class="tags_box">
+						<li><a href="">django</a></li>
+						<!-- <li><a href="">ainoodle</a></li>
+						<li><a href="">phụng</a></li>
+						<li><a href="">hoàng</a></li>
+						<li><a href="">cntt</a></li>
+						<li><a href="">học hành</a></li>
+						<li><a href="">tìm hiểu ai</a></li>
+						<li><a href="">nhanh</a></li>
+						<li><a href="">học nhanh</a></li>
+						<li><a href="">cách làm</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
+{%endblock%}

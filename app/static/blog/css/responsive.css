@@ -1,0 +1,148 @@
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 10px; }
+
+  .header .logo_site {
+    margin: 10px 0; }
+
+  .header .logo_site h1 {
+    font-size: 24px; }
+
+  .header .logo_site .site_description {
+    font-size: 15px; }
+
+  .header .header_menu {
+    display: none; }
+
+  .menu_icon {
+    display: block !important;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px; }
+
+  .mobile_header {
+    z-index: 999;
+    display: block !important;
+    left: -100%;
+    position: fixed;
+    line-height: 40px;
+    transition: .3s;
+    top: 0;
+    box-shadow: 2px 1px 4px 3px rgba(0, 10, 18, 0.3);
+    float: left;
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    overflow: scroll; }
+    .mobile_header .menu_icon_close {
+      position: absolute;
+      top: 0;
+      left: 10px; }
+    .mobile_header .logo_site {
+      margin: 0;
+      margin-bottom: 2px; }
+    .mobile_header .site_description {
+      font-size: 14px;
+      line-height: 140%;
+      margin-bottom: 10px; }
+    .mobile_header ul {
+      background: #f1f1f1; }
+      .mobile_header ul li {
+        border-bottom: 1px solid #e5e5e5; }
+        .mobile_header ul li a {
+          display: block;
+          padding: 10px; }
+
+  .btn-fa-search {
+    display: block !important;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px; }
+
+  .mobile_search {
+    z-index: 999;
+    display: block !important;
+    right: -100%;
+    top: 1px;
+    position: fixed;
+    line-height: 40px;
+    transition: .3s;
+    box-shadow: 2px 1px 4px 3px rgba(0, 10, 18, 0.3);
+    float: right;
+    width: 80%;
+    height: 72px;
+    background-color: #fff; }
+    .mobile_search input {
+      width: 93%;
+      height: 34px;
+      padding: 0 10px;
+      border: 1px solid #efefef;
+      color: #777;
+      border-radius: 4px;
+      outline: none;
+      top: 19px;
+      right: 10px;
+      position: absolute; }
+    .mobile_search button.search-button {
+      border: none;
+      background: no-repeat;
+      font-size: 20px;
+      color: #777;
+      position: absolute;
+      right: 15px;
+      top: 24px;
+      cursor: pointer;
+      outline: none; }
+
+  .home_page {
+    display: block; }
+    .home_page .home_center {
+      margin-bottom: 30px; }
+
+  .detail_center {
+    margin-bottom: 30px; }
+
+  .detail_box {
+    overflow: hidden; }
+
+  .detail_page .post-navigation {
+    margin-bottom: 30px; } }
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .sidebar_li.fanpage_fb {
+    overflow: hidden; } }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 100%;
+    padding: 0 15px; }
+
+  .home_page {
+    display: block; }
+    .home_page .home_center {
+      margin-bottom: 30px; }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between; }
+
+  .sidebar_li.fanpage_fb {
+    overflow: hidden; }
+
+  .detail_center {
+    margin-bottom: 30px; }
+
+  .detail_box {
+    overflow: hidden; }
+
+  .detail_page .post-navigation {
+    margin-bottom: 30px; } }
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding: 0 15px; }
+
+  .sidebar_li.fanpage_fb {
+    overflow: hidden; } }

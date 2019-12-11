@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div class="home_page container">
+            <div class="home_center">
+                <div class="home_center_box">
+                    {% for post in post_list %}
+                    <div class="home_center_li">
+                        <p class="meta_category">
+                            <a href="" title="tech">Technology</a>
+                        </p>
+                        <h2 class="title"><a href="{% url 'post_detail' post.slug  %}" class="hover_link">{{ post.title }}</a></h2>
+                        <ul class="entry_meta">
+                            <li>
+                                <span><i class="fa fa-user-o" aria-hidden="true"></i>
+                                    <a class="" href="">{{ post.author }}</a>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                {{ post.created_at}}
+                            </li>
+                            <li>
+                                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                0 Comments
+                            </li>
+
+                        </ul>
+                        <p class="description">
+                            {{post.content|slice:":170" }}...
+                        </p>
+                        <a href="{% url 'post_detail' post.slug  %}" class="read_more">Đọc thêm</a>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="see_more">
+                    <!-- <button class="btn_see_more">Tiếp tục >></button> -->
+                    {% if is_paginated %}
+                    <nav aria-label="Page navigation conatiner"></nav>
+                      {% if page_obj.has_previous %}
+                      <a href="?page={{ page_obj.previous_page_number }}" class="btn_see_more">&laquo; PREV </a>
+                      {% endif %}
+                      {% if page_obj.has_next %}
+                      <a href="?page={{ page_obj.next_page_number }}" class="btn_see_more"> NEXT &raquo;</a>
+                      {% endif %}
+                  </div>
+                  {% endif %}
+
+            </div>
+            <div class="sidebar">
+                <div class="sidebar_li fanpage_fb">
+                    <h2 class="title">
+                        Fanpage Facebook
+                        <span></span>
+                    </h2>
+                    <div class="clear"></div>
+                    <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FXemVuiVe247&tabs=timeline&width=350&height=350&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2298696833694808" width="350" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
+                </div>
+
+                <div class="sidebar_li posts posts_hot">
+                    <h2 class="title">
+                        Bài hot
+                        <span></span>
+                    </h2>
+                    <ul class="posts_box">
+       <!--                  <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 5 – Nhận diện biển số xe bằng WPOD và SVM</a></li>
+                        <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 4 – Nhận diện biển số xe bằng WPOD và Tesseract OCR</a></li>
+                        <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 3 – Phát hiện biển số bằng OpenCV thuần</a></li>
+                        <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 2 – Phát hiện biển số xe bằng pretrain WPOD-NET</a></li>
+                        <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 1 – Phát hiện biển số xe bằng pretrain model YOLO</a></li> -->
+                    </ul>
+                </div>
+
+
+                <div class="sidebar_li posts posts_views">
+                    <h2 class="title">
+                        Bài nhiều lượt xem
+                        <span></span>
+                    </h2>
+                    <ul class="posts_box">
+     <!--                    <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 5 – Nhận diện biển số xe bằng WPOD và SVM</a></li>
+                        <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 4 – Nhận diện biển số xe bằng WPOD và Tesseract OCR</a></li>
+                        <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 3 – Phát hiện biển số bằng OpenCV thuần</a></li>
+                        <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 2 – Phát hiện biển số xe bằng pretrain WPOD-NET</a></li>
+                        <li><a href="" class="hover_link">[Nhận diện biển số xe] Chương 1 – Phát hiện biển số xe bằng pretrain model YOLO</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="sidebar_li tags">
+                    <h2 class="title">
+                        Tags
+                        <span></span>
+                    </h2>
+                    <ul class="tags_box">
+                        <li><a href="">django</a></li>
+<!--                         <li><a href="">ainoodle</a></li>
+                        <li><a href="">phụng</a></li>
+                        <li><a href="">hoàng</a></li>
+                        <li><a href="">cntt</a></li>
+                        <li><a href="">học hành</a></li>
+                        <li><a href="">tìm hiểu ai</a></li>
+                        <li><a href="">nhanh</a></li>
+                        <li><a href="">học nhanh</a></li>
+                        <li><a href="">cách làm</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+{%endblock%}
