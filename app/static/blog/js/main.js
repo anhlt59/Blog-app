@@ -35,16 +35,17 @@ $(document).click(function () {
 });
 
 
-// $.ajax({
-//         method: 'GET',
-//         url: 'http://127.0.0.1:8001/api/blog/posts',
-//         // data: {
-//         //     k : value
-//         // },
-//         // beforeSend: function(){
-//         //     $(".form-control").stop().addClass('loading');
-//         // },
-//         success: function (response) {
-// 						console.log(response)
-//         }
-//     });
+$.ajax({
+        method: 'GET',
+        url: 'http://127.0.0.1:8000/api/blog/posts',
+        // data: {
+        //     k : value
+        // },
+        // beforeSend: function(){
+        //     $(".form-control").stop().addClass('loading');
+        // },
+        success: function (response) {
+						console.log(response)
+						console.log(1)
+        }
+    });
