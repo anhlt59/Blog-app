@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -97,6 +98,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -138,10 +140,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
-
+USE_I18N = True
+LANGUAGE_CODE = 'vi'
 LANGUAGES = (
-    ('en_US', _('English')),
-    ('vi_VN', _('Vietnamese'))
+    ('vi', _('Vietnamese')),
+    ('en', _('English')),
 )
 
 TIME_ZONE = 'Asia/Ho_Chi_Minh'
@@ -152,6 +155,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOCALE_PATHS = [
+    root('locale')
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -165,10 +171,14 @@ MEDIA_ROOT = root('static', 'media')
 AUTH_USER_MODEL = 'core.User'
 
 
-# SUIT CONFIG
+# # SUIT CONFIG
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'Blog Admin',
+    'ADMIN_NAME': 'Blog',
     'LIST_PER_PAGE': 15,
     'CONFIRM_UNSAVED_CHANGES': True,
     'MENU_OPEN_FIRST_CHILD': True,
 }
+# PHRASE_ENABLED = True
+# PHRASE_PROJECT_ID = 'YOUR_PROJECT_ID'
+# PHRASE_PREFIX = '{{__'
+# PHRASE_SUFFIX = '__}}'

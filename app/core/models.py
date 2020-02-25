@@ -49,7 +49,7 @@ class User(AbstractBaseUser, PermissionsMixin, TimeStampMixin):
     """ Custom user model that support using email instead of username."""
 
     email = models.EmailField(max_length=255, unique=True)
-    name = models.CharField(max_length=255)
+    # name = models.CharField(max_length=255)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -57,7 +57,7 @@ class User(AbstractBaseUser, PermissionsMixin, TimeStampMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['name',]
+    # REQUIRED_FIELDS = ['name',]
 
     def __str__(self):
         """Return string representation of user"""

@@ -1,4 +1,5 @@
-{% load static from staticfiles %}
+{% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -35,15 +36,15 @@
             <div class="header_menu">
                 <div class="container">
                     <ul>
-                        <li><a href="./" class="hover_link active">Trang chủ</a></li>
-                        <li><a href="#" class="hover_link">Basic</a></li>
-                        <li><a href="#" class="hover_link">Web Development</a></li>
-                        <li><a href="#" class="hover_link">Data Science</a></li>
-                        <li><a href="#" class="hover_link">Share Data</a></li>
+                        <li><a href="/" class="hover_link active">{% trans "Home" %}</a></li>
+                        <li><a href="#" class="hover_link">{% trans "Basic" %}</a></li>
+                        <li><a href="#" class="hover_link">{% trans "Web Development" %}</a></li>
+                        <li><a href="#" class="hover_link">{% trans "Data Science" %}</a></li>
+                        <li><a href="#" class="hover_link">{% trans "Share Data" %}</a></li>
                     </ul>
                     <div class="search">
                         <form method="GET" action="">
-                            <input type="text" name="s" value="" placeholder="Bạn đang tìm kiếm gì?">
+                            <input type="text" name="s" value="" placeholder="{% trans "Search" %}">
                             <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
@@ -59,17 +60,18 @@
                     </div>
                 </div>
                 <ul>
-                    <li><a href="./" class="hover_link active">Trang chủ</a></li>
-                    <li><a href="#" class="hover_link">Basic</a></li>
-                    <li><a href="#" class="hover_link">Computer Vision</a></li>
-                    <li><a href="#" class="hover_link">RNN-LSTM-GRU</a></li>
-                    <li><a href="#" class="hover_link">Share Data</a></li>
+                  <li><a href="./" class="hover_link active">{% trans "Home" %}</a></li>
+                  <li><a href="#" class="hover_link">{% trans "Basic" %}</a></li>
+                  <li><a href="#" class="hover_link">{% trans "Web Development" %}</a></li>
+                  <li><a href="#" class="hover_link">{% trans "Data Science" %}</a></li>
+                  <li><a href="#" class="hover_link">{% trans "Share Data" %}</a></li>
+                  <li><a href="#" class="hover_link">{% trans "Language" %}</a></li>
                 </ul>
             </div>
             <span class="btn-fa-search"><i class="fa fa-search"></i></span>
             <div class="mobile_search">
                 <form method="GET" action="">
-                    <input type="text" name="s" value="" placeholder="Bạn đang tìm kiếm gì?">
+                    <input type="text" name="s" value="" placeholder="{% trans "Search" %}">
                     <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
@@ -80,8 +82,8 @@
         {% endblock content %}
 
         <div class="footer">
-            <div class="container">
-                <p>Trang chia sẻ kiến thức online miễn phí, với nhiều chủ đề khác nhau như: học lập trình, học tiếng Anh, thủ thuật công nghệ, chia sẻ tài nguyên miễn phí,...</p>
+            <div class="container" style="word-wrap: break-word;">
+                <p>{% trans "Free sharing" %}</p>
             </div>
         </div>
     </div>

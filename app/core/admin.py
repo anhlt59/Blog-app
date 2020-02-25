@@ -8,16 +8,16 @@ from core import models
 # Register your models here.
 class UserAdmin(BaseUserAdmin):
     ordering = ['id']
-    list_display = ['email', 'name', 'created_at', 'updated_at']
+    list_display = ['email', 'created_at', 'updated_at']
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        (_('Personal Info'),
-            {
-                'fields': (
-                    'name',
-                    ),
-            }
-        ),
+        # (_('Personal Info'),
+        #     {
+        #         'fields': (
+        #             'name',
+        #             ),
+        #     }
+        # ),
         (
             _('Permissions'),
             {
@@ -42,7 +42,7 @@ class UserAdmin(BaseUserAdmin):
             'fields': ('email', 'password1', 'password2')
         }),
     )
-    search_fields = ('name', 'email',)
+    search_fields = ('email',)#('name', 'email',)
 
 
 class PostAdmin(admin.ModelAdmin):

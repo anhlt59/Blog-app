@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block content %}
 		<div class="home_page detail_page container">
 			<div class="detail_center">
@@ -26,31 +27,15 @@
 						</li>
 
 					</ul>
+					<br>
 					<div class="entry_content">
 						<p class="card-text ">{{ object.content | safe }}</p>
 					</div>
 				</div>
 
-				<!-- <nav class="navigation post-navigation">
-					<div class="nav-links">
-						<div class="nav-previous">
-							<a href="" >
-								<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-								<span class="nav-title">Dạy bé “máy tính” tập tô màu cho ảnh đen trắng bằng mạng Auto-Encoder</span>
-							</a>
-						</div>
-						<div class="nav-next">
-							<a href="">
-								<span class="nav-title">Kết nối C# với Python Flask để triển khai hệ thống AI Client-Server – Chương 2</span>
-								<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-							</a>
-						</div>
-					</div>
-				</nav> -->
-
 				<div class="related_post">
 					<h2 class="title">
-						Bài liên quan
+						{% trans "Relate post" %}
 						<span></span>
 					</h2>
 					<ul class="posts_box">
@@ -75,7 +60,7 @@
 
 				<div class="sidebar_li posts posts_hot">
 					<h2 class="title">
-						Bài hot
+						{% trans "Hot post" %}
 						<span></span>
 					</h2>
 					<ul class="posts_box">
@@ -90,7 +75,7 @@
 
 				<div class="sidebar_li posts posts_views">
 					<h2 class="title">
-						Bài nhiều lượt xem
+						{% trans "Most view" %}
 						<span></span>
 					</h2>
 					<ul class="posts_box">

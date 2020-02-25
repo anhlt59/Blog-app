@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block content %}
         <div class="home_page container">
             <div class="home_center">
@@ -7,7 +8,7 @@
                     {% for post in post_list %}
                     <div class="home_center_li">
                         <p class="meta_category">
-                            <a href="" title="tech">Technology</a>
+                            <a href="" title="tech">{% trans "Technology" %}</a>
                         </p>
                         <h2 class="title"><a href="{% url 'post_detail' post.slug  %}" class="hover_link">{{ post.title }}</a></h2>
                         <ul class="entry_meta">
@@ -26,10 +27,10 @@
                             </li>
 
                         </ul>
-                        <p class="description">
+                        <!-- <p class="description">
                             {{post.content|slice:":170" }}...
-                        </p>
-                        <a href="{% url 'post_detail' post.slug  %}" class="read_more">Đọc thêm</a>
+                        </p> -->
+                        <a href="{% url 'post_detail' post.slug  %}" class="read_more">{% trans "Read more" %}</a>
                     </div>
                     {% endfor %}
                 </div>
@@ -60,7 +61,7 @@
 
                 <div class="sidebar_li posts posts_hot">
                     <h2 class="title">
-                        Bài hot
+                        {% trans "Hot post" %}
                         <span></span>
                     </h2>
                     <ul class="posts_box">
@@ -75,7 +76,7 @@
 
                 <div class="sidebar_li posts posts_views">
                     <h2 class="title">
-                        Bài nhiều lượt xem
+                        {% trans "Most view" %}
                         <span></span>
                     </h2>
                     <ul class="posts_box">
